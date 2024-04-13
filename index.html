@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* For all OR astric */
+     *{
+        margin:0px;
+        padding :0px;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .main-wrapper{
+         width: 100%;
+         min-height: 100vh;
+         background:#444;
+         padding: 20px;
+        }
+
+        .internal-wrapper{
+        width: 80%;
+        margin-left:10%;
+      }
+
+      header{
+        width: 100%;
+        height:300px;
+        background:linear-gradient(90deg,rgba(4,4,4,0.6),rgba(0,0,0,0.5)), url(./banner.jpg);
+        background-size: cover ;
+        background-position: center;
+        position:relative; 
+
+      }
+/* when parent is having position relative and child is having position absolute then child will take position according to its parent. */
+      header .caption{
+         position:absolute;
+        top:50%; 
+        left:250px;
+        transform: translate(-44%,-50%);
+        background:rgba(220,230,220,0.5);
+        padding: 25px;
+      }
+
+      .header-heading{
+         color:#000;
+         font-size:48px;
+         font-weight: 700;
+         text-shadow: 3px 1px 8px rgba(230,230,230,0.6);
+
+      }
+      header .header-text
+      {
+        color:#000;
+        margin-top:15px;
+        text-shadow: 3px 1px 8px rgba(230,230,230,0.6);
+        font-weight: bolder;
+      }
+      nav{
+        width: 100%;
+        background:#222;
+        margin: 10px 0px;
+        height:50px;
+        line-height: 50px;
+      }
+
+      nav ul{
+        list-style-type: none;
+        width: 100%;
+        display:flex;
+        justify-content: space-evenly;
+      }
+      nav ul li a{
+        text-decoration:none;
+        color:#fff;
+        display: block;
+        padding:0px 20px;
+        transition:0.5s ease-in-out;
+      }
+
+      
+
+      
+      nav ul li a:hover{
+        background:#fff;
+        color:#000;
+      }
+main{
+width:100%;
+height:auto;
+padding:20px 0px;
+display: flex;
+flex-direction: row;
+}
+
+main .sidebar{
+width: 300px;
+
+}
+
+.sidebar h2,.content-section h2{
+color:#f5f5f5;
+font-weight: bolder;
+margin-top : 30px;
+margin-bottom:20px;
+font-size:24px;
+font-weight: 900;
+text-align: center;
+/* text-shadow: 3px 1px 8px rgba(230,230,230,0.6); */
+}
+
+.sidebar ul{
+width: 100%;
+list-style: none;
+
+}
+.sidebar ul li{
+width:100%;
+height:19px;
+
+text-align: center;
+color:#999;
+}
+.sidebar p{
+color:#999;
+text-align: justify;
+}
+
+.content-section{
+width: calc(100% - 300px);
+padding:0px 20px;
+box-sizing: border-box;
+}
+.first{
+width:100%;
+
+}
+.first h2,.first p,.second h2, .second p{
+text-align: justify;
+}
+.first p,.second p{
+color:#888;
+}
+
+.second{
+display: flex;
+justify-content: space-between;
+}
+
+.second div{
+padding:15px;
+}
+
+.second button{
+width: 90px;
+height:40px;
+border-radius:0px;
+margin-left:15px;
+}
+
+</style>
+</head>
+<body>
+   
+    <div class="main-wrapper">
+        
+        <div class="internal-wrapper">
+                <header>
+                      <div class="caption">
+                          <p class="header-heading">Heading Text </p>
+                          <p class="header-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
+                      </div>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Login</a></li>
+                    </ul>
+                </nav>
+
+                <main>
+                      <div class="sidebar">
+                           <h2>Sidebar Heading.</h2>
+                           <ul>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                                <li>Some Text</li>
+                           </ul>
+                           <h2>Sidebar Heading Two</h2>
+
+                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam 
+                            nemo saepe minus, doloremque dignissimos laboriosam repellendus error
+                             eligendi quasi atque sapiente doloribus ipsa possimus, commodi fugit
+                              delectus aliquam animi sit.</p>
+                      </div>
+                      <div class="content-section">
+                              <div class="first">
+                                   <h2 >Content Area</h2>
+                                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic eos repudiandae repellat assumenda, necessitatibus sequi autem accusantium fugit eveniet harum soluta vel veniam. Quidem neque saepe labore hic suscipit? Ex.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusamus vitae magnam voluptatem blanditiis esse modi earum maxime quasi aspernatur est, ducimus officiis quibusdam laborum dicta veniam sequi neque voluptatibus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non, error exercitationem architecto in libero. Suscipit commodi autem dolorum enim eligendi. Id odit doloremque tempore inventore eos, voluptate maxime nemo.
+                                </p>
+                              </div>
+                              <div class="second">
+                                   <div>
+                                      <h2>Second Section Div.</h2>
+
+                                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut est quia odio quis repudiandae sint voluptatem nostrum quod nesciunt distinctio quam modi fugit, perspiciatis consequuntur neque quaerat expedita! Quam, autem!</p>
+                                       <br><br>
+                                      <button>Read More!</button>
+                                   </div>
+                                   <div>
+
+                                    <h2>Second Section Div.</h2>
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut est quia odio quis repudiandae sint voluptatem nostrum quod nesciunt distinctio quam modi fugit, perspiciatis consequuntur neque quaerat expedita! Quam, autem!</p>
+                                    <br><br>
+                                    <button>Read More!</button>
+                                   </div>
+                              </div>
+                      </div>
+                </main>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
